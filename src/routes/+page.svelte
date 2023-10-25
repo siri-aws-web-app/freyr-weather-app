@@ -18,7 +18,7 @@
 			</picture>
 		</span>
 
-		to your new<br />SvelteKit app
+		to Siri's not so finished Svelte App named Freyr!
 	</h1>
 
 	<h2>
