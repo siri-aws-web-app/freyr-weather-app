@@ -1,4 +1,4 @@
-name: Publish App to S3 dev or staging
+name: Publish App to S3 dev, staging or production
 
 on:
   release:
