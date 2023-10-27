@@ -1,40 +1,40 @@
 <script lang="ts">
 	import '../app.postcss';
 	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
+	import GithubLogo from '$lib/images/github-mark-white.svg';
+	import FreyrLogo from '$lib/images/freyr-logo.svg';
+	import { IconChevronDown } from '@tabler/icons-svelte';
 </script>
 
 <!-- App Shell -->
-<AppShell>
+<AppShell >
 	<svelte:fragment slot="header">
 		<!-- App Bar -->
-		<AppBar>
+		<AppBar gridColumns="grid-cols-3" slotDefault="place-self-center" slotTrail="place-content-end">
 			<svelte:fragment slot="lead">
-				<strong class="text-xl uppercase">Skeleton</strong>
+				<a href="/">
+					<img class=" w-48" src="{FreyrLogo}" alt="freyr-logo">
+				</a>	
+			</svelte:fragment>
+			<svelte:fragment>
+					<div class="logo-cloud grid-cols-3">
+						<div class="logo-item variant-soft hover:bg-surface-700 px-20">
+							<a href="/">Home</a>
+						</div>
+						<div class="logo-item variant-soft hover:bg-surface-700 px-20">
+							<a href="/cities">Cities</a><span><IconChevronDown/></span>
+							<div class="card p-4 w-60 shadow-xl">
+
+							</div>
+						</div>
+						<div class="logo-item variant-soft hover:bg-surface-700 px-20">
+							<a href="/about">About</a>
+						</div>
+					</div>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
-				<a
-					class="btn btn-sm variant-ghost-surface"
-					href="https://discord.gg/EXqV7W8MtY"
-					target="_blank"
-					rel="noreferrer"
-				>
-					Discord
-				</a>
-				<a
-					class="btn btn-sm variant-ghost-surface"
-					href="https://twitter.com/SkeletonUI"
-					target="_blank"
-					rel="noreferrer"
-				>
-					Twitter
-				</a>
-				<a
-					class="btn btn-sm variant-ghost-surface"
-					href="https://github.com/skeletonlabs/skeleton"
-					target="_blank"
-					rel="noreferrer"
-				>
-					GitHub
+				<a href="https://github.com/orgs/siri-aws-web-app/repositories" target="_blank">
+						<img class="w-10" src="{GithubLogo}" alt="github-logo">
 				</a>
 			</svelte:fragment>
 		</AppBar>
