@@ -39,7 +39,7 @@
 								</div>
 							</button>
 							{#if show}
-							<CitiesDropdownMenu />
+								<CitiesDropdownMenu />	
 							{/if}
 						</form>
 						<form action="/about">

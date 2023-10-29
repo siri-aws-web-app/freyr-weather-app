@@ -1,35 +1,37 @@
 <script lang="ts">
+	import { IconChevronRight, IconChevronLeft } from '@tabler/icons-svelte';
+
 	let elemCarousel: HTMLDivElement;
 	const unsplashIds = ['vjUokUWbFOs', '1aJuPtQJX_I', 'Jp6O3FFRdEI', 'I3C_eojFVQY', 's0fXOuyTH1M', 'z_X0PxmBuIQ'];
 				
-				
-function carouselLeft(): void {
-	const x =
-		elemCarousel.scrollLeft === 0
-			? elemCarousel.clientWidth * elemCarousel.childElementCount // loop
-			: elemCarousel.scrollLeft - elemCarousel.clientWidth; // step left
-	elemCarousel.scroll(x, 0);
-}
-
-function carouselRight(): void {
-	const x =
-		elemCarousel.scrollLeft === elemCarousel.scrollWidth - elemCarousel.clientWidth
-			? 0 // loop
-			: elemCarousel.scrollLeft + elemCarousel.clientWidth; // step right
-	elemCarousel.scroll(x, 0);
-}
 					
-function carouselThumbnail(index: number) {
-	elemCarousel.scroll(elemCarousel.clientWidth * index, 0);
-}
+	function carouselLeft(): void {
+		const x =
+			elemCarousel.scrollLeft === 0
+				? elemCarousel.clientWidth * elemCarousel.childElementCount // loop
+				: elemCarousel.scrollLeft - elemCarousel.clientWidth; // step left
+		elemCarousel.scroll(x, 0);
+	}
+
+	function carouselRight(): void {
+		const x =
+			elemCarousel.scrollLeft === elemCarousel.scrollWidth - elemCarousel.clientWidth
+				? 0 // loop
+				: elemCarousel.scrollLeft + elemCarousel.clientWidth; // step right
+		elemCarousel.scroll(x, 0);
+	}
+						
+	function carouselThumbnail(index: number) {
+		elemCarousel.scroll(elemCarousel.clientWidth * index, 0);
+	}
 				
 </script>
 
 
-<div class="card p-4 grid grid-cols-[auto_1fr_auto] gap-4 items-center w-3/5 mt-5 mb-0">
+<div class="card p-4 grid grid-cols-[auto_1fr_auto] gap-4 items-center w-7/12 mt-5 mb-0">
 	<!-- Button: Left -->
 	<button type="button" class="btn-icon variant-filled" on:click={carouselLeft}>
-		<i class="fa-solid fa-arrow-left" />
+		<IconChevronLeft />
 	</button>
 	<!-- Full Images -->
 	<div bind:this={elemCarousel} class="snap-x snap-mandatory scroll-smooth flex overflow-x-auto">
@@ -44,11 +46,11 @@ function carouselThumbnail(index: number) {
 	</div>
 	<!-- Button: Right -->
 	<button type="button" class="btn-icon variant-filled" on:click={carouselRight}>
-		<i class="fa-solid fa-arrow-right" />
+		<IconChevronRight />
 	</button>
 </div>
 
-<div class="card p-4 grid grid-cols-6 gap-4 w-3/5">
+<div class="card p-4 grid grid-cols-6 gap-4 w-7/12">
 	{#each unsplashIds as unsplashId, i}
 		<button type="button" on:click={() => carouselThumbnail(i)}>
 			<img

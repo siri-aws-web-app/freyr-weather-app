@@ -1,4 +1,7 @@
 <script>
+	import { scale } from "svelte/transition";
+	import { quintOut } from "svelte/easing";
+    
     const cities = [
         { name: 'Karlsruhe', image: import('$lib/images/cities/karlsruhe.png') },
         { name: 'Stuttgart', image: import('$lib/images/cities/stuttgart.png') },
@@ -13,7 +16,7 @@
     ];
 </script>
 
-<div class="card p-4 w-3/4 shadow-2xl absolute m-auto left-0 right-0">
+<div class="card p-4 w-3/4 shadow-2xl absolute m-auto left-0 right-0" transition:scale={{ duration: 350, easing: quintOut }}>
     <div class="snap-x scroll-px-4 snap-mandatory scroll-smooth flex gap-4 overflow-x-auto px-4 py-10">
         {#each cities as city}
         <div class="snap-start shrink-0 w-80 flex flex-col items-center justify-center bor">

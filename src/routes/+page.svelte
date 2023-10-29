@@ -3,7 +3,7 @@
 </script>
 
 <div class="container h-full mx-auto flex justify-center items-center">
-	<div class="space-y-5 text-center flex flex-col items-center mb-10">
+	<div class="space-y-5 text-center flex flex-col items-center ">
 		<!-- / -->
 		<CityWeatherCarousel />
 	</div>
