@@ -4,6 +4,12 @@
 	import GithubLogo from '$lib/images/github-mark-white.svg';
 	import FreyrLogo from '$lib/images/freyr-logo.svg';
 	import { IconChevronDown } from '@tabler/icons-svelte';
+	import CitiesDropdownMenu from '$lib/components/appbar/dropdown-menu.svelte';
+
+	export let show = false;
+	function handleDropDownMenu() {
+		show = !show
+	}
 </script>
 
 <!-- App Shell -->
@@ -17,19 +23,32 @@
 				</a>	
 			</svelte:fragment>
 			<svelte:fragment>
-					<div class="logo-cloud grid-cols-3">
-						<div class="logo-item variant-soft hover:bg-surface-700 px-20">
-							<a href="/">Home</a>
-						</div>
-						<div class="logo-item variant-soft hover:bg-surface-700 px-20">
-							<a href="/cities">Cities</a><span><IconChevronDown/></span>
-							<div class="card p-4 w-60 shadow-xl">
-
-							</div>
-						</div>
-						<div class="logo-item variant-soft hover:bg-surface-700 px-20">
-							<a href="/about">About</a>
-						</div>
+					<div class="logo-cloud grid-flow-col">
+						<form action="/">
+							<button class="btn p-0">
+								<div class="logo-item variant-soft hover:bg-surface-700 w-48">
+								<span>Home</span>
+								</div>
+							</button>
+						</form>
+						<form on:mouseenter={handleDropDownMenu} on:mouseleave={handleDropDownMenu}>
+							<button class="btn p-0">
+								<div class="logo-item variant-soft hover:bg-surface-700 w-48">
+								<span>Cities</span>
+								<IconChevronDown />
+								</div>
+							</button>
+							{#if show}
+							<CitiesDropdownMenu />
+							{/if}
+						</form>
+						<form action="/about">
+							<button class="btn p-0">
+								<div class="logo-item variant-soft hover:bg-surface-700 w-48">
+								<span>About</span>
+								</div>
+							</button>
+						</form>
 					</div>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
