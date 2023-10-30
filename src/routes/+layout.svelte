@@ -23,7 +23,7 @@
 				</a>	
 			</svelte:fragment>
 			<svelte:fragment>
-					<div class="logo-cloud grid-flow-col">
+					<div class="logo-cloud grid-flow-col bg-gradient-to-br variant-gradient-warning-error">
 						<form action="/">
 							<button class="btn p-0">
 								<div class="logo-item variant-soft hover:brightness-150 w-48">
