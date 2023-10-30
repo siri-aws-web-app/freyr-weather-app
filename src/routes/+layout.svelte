@@ -26,14 +26,14 @@
 					<div class="logo-cloud grid-flow-col">
 						<form action="/">
 							<button class="btn p-0">
-								<div class="logo-item variant-soft hover:bg-surface-700 w-48">
+								<div class="logo-item variant-soft hover:brightness-150 w-48">
 								<span>Home</span>
 								</div>
 							</button>
 						</form>
 						<form on:mouseenter={handleDropDownMenu} on:mouseleave={handleDropDownMenu}>
 							<button class="btn p-0">
-								<div class="logo-item variant-soft hover:bg-surface-700 w-48">
+								<div class="logo-item variant-soft hover:brightness-150 w-48">
 								<span>Cities</span>
 								<IconChevronDown />
 								</div>
@@ -44,7 +44,7 @@
 						</form>
 						<form action="/about">
 							<button class="btn p-0">
-								<div class="logo-item variant-soft hover:bg-surface-700 w-48">
+								<div class="logo-item variant-soft hover:brightness-150 w-48">
 								<span>About</span>
 								</div>
 							</button>

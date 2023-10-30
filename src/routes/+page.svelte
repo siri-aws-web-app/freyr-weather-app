@@ -1,11 +1,11 @@
 <script>
-	import CityWeatherCarousel from '$lib/components/city-weather-carousel/city-weather-carousel.svelte';
+	import CityWeatherGallery from '$lib/components/city-weather-carousel/city-weather-gallery.svelte';
 </script>
 
 <div class="container h-full mx-auto flex justify-center items-center">
-	<div class="space-y-5 text-center flex flex-col items-center ">
+	<div class="space-y-5 text-center flex flex-col items-center">
 		<!-- / -->
-		<CityWeatherCarousel />
+		<CityWeatherGallery />
 	</div>
 </div>
 
