@@ -6,7 +6,7 @@
 	import { IconChevronDown } from '@tabler/icons-svelte';
 	import CitiesDropdownMenu from '$lib/components/appbar/dropdown-menu.svelte';
 
-	export let show = false;
+	export let show:boolean = false;
 	function handleDropDownMenu() {
 		show = !show
 	}

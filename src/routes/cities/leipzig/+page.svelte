@@ -1,4 +1,5 @@
-<svelte:head>
-	<title>Karlsruhe</title>
-	<meta name="description" content="About this app" />
-</svelte:head>
+<script>
+	import SvelteHead from "$lib/components/header/svelte-head.svelte";
+</script>
+
+<SvelteHead city="Leipzig" metaName="leipzig" metaContent="Leipzig Weather"/>

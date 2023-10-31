@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://qr3gs2phpt.eu-central-1.awsapprunner.com';
+axios.defaults.baseURL = 'https://norns.siri-freyr.xyz';
 
 export function getCurrentPastWeatherData(cities: string[]) {
     return axios.get(`/current-weather-data?cities=${cities.join(',')}`)
