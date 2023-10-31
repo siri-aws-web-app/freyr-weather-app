@@ -21,13 +21,13 @@
 	<h2>
 		<SpanGradient text="The Frontend Fiesta" />
 	</h2>
-	<pre class="pre">Svelte, Sveltekit, S3 Static Site Hosting, Cloudfront</pre>
+	<pre class="pre">Svelte, Sveltekit, Tailwind, S3 Static Site Hosting, Cloudfront</pre>
 	<p>
 		The application was written in Svelte and SvelteKit. It is built via Static Site Generation (SSG) 
 		and deployed to AWS S3 which serves as a Static Website Host. The application you are looking at is 
 		served via AWS Cloudfront which is a Content Delivery Network (CDN) that caches the application and
 		provides a global edge location for the application to be served from. It is deployed with Github Actions
-		via Tagging.
+		via releases and tagging.
 	</p>
 
 	<h2>
@@ -43,22 +43,22 @@
 	</p>
 
 	<h2><SpanGradient text="The Closet In the Backend To Narnia" /></h2>
-	<pre class="pre">DynamoDB, Lambda Functions, EventBridge</pre>
+	<pre class="pre">DynamoDB, Lambda Functions, EventBridge, S3</pre>
 	<p>
 		DynamoDB serves as the database for the application. There are multiple tables that store the weather data
-		for different cities. The data is populated via a Lambda function (written in NodeJS) that is triggered by EventBridge. 
-		EventBridge, this basically turns our Lambda function into a cron job that runs periodically to fetch the 
-		weather data from WeatherApi.
+		for different cities. The data is populated via the Lambda functions (written in NodeJS and implemented with Lambda Layers) 
+		that is triggered by EventBridge. EventBridge basically turns our Lambda functions into a cron job that runs periodically 
+		to fetch the weather data from WeatherApi. The Lambda Functions and the Lambda Layers are zipped and uploaded to S3.
 	</p>
 
 	<h2><SpanGradient text="The Memeworty Overengineering" /></h2>
-	<pre class="pre">Terraform, Terragrunt, AWS</pre>
+	<pre class="pre">Terraform, Terragrunt, AWS Services (Route53, OIDC, VPC, etc.)</pre>
 	<p>
 		This is the part where I tell you, that this whole project, the application you are looking at, the API, 
 		the database, literally everything is running on AWS provided and configured with Terraform, not just
 		Terraform, to make it even more complicated, it's Terragrunt. Makes life easier when you have multiple
 		environments. Yes, the whole infrastructure is seperated into development, staging / non-production,
-		and production and shared-resources.
+		production and shared-resources.
 	</p>
 	<p>Now you might be thinking:</p>
 	<pre class="pre">Why would you do this?</pre>
