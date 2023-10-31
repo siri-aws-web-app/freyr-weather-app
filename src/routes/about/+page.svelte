@@ -1,5 +1,6 @@
 <script>
 	import SpanGradient from '$lib/components/typography/span-gradient.svelte';
+	import { fade } from 'svelte/transition';
 </script>
 
 <svelte:head>
@@ -7,7 +8,7 @@
 	<meta name="description" content="About this app" />
 </svelte:head>
 
-<article class="prose prose-xl prose-invert mx-auto my-8">
+<article class="prose prose-xl prose-invert mx-auto my-8" in:fade={{ duration:300 }}>
 	<h1 class="text-center text">
 		<SpanGradient text="About This App" />
 	</h1>

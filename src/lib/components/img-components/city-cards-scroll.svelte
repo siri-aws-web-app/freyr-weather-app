@@ -1,5 +1,5 @@
 <script>
-    import CityCards from "$lib/components/cards/city-cards.svelte";
+    import CityCards from "$lib/components/cards/city-cards-gradient.svelte";
 
     const cities = [
         { name: 'Karlsruhe', image: import('$lib/images/cities/karlsruhe.png') },

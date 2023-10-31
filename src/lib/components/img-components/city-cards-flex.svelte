@@ -1,5 +1,5 @@
 <script>
-    import CityCardsFilter from "$lib/components/cards/city-cards-filter.svelte";
+    import CityCardsFilter from "$lib/components/cards/city-cards.svelte";
 
     const cities = [
         { name: 'Karlsruhe', image: import('$lib/images/cities/karlsruhe.png') },
@@ -15,7 +15,7 @@
     ];
 </script>
 
-<div>
+<div >
     <!-- First row with 3 cities -->
     <div class="flex justify-center">
         {#each cities.slice(0, 3) as city}
