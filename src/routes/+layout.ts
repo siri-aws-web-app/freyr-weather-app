@@ -5,4 +5,4 @@ import { getAndSaveCurrentWeatherData } from '$lib/utils/current-weather-store';
 export const prerender = true;
 
 // Fetch current weather data on page load and save to store
-getAndSaveCurrentWeatherData();
+// getAndSaveCurrentWeatherData();
