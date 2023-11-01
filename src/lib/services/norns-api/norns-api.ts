@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://api.siri-freyr.xyz';
+axios.defaults.baseURL = import.meta.env.VITE_NORNS_API_URL;
 
 export function getCurrentPastWeatherData(cities: string[]) {
     return axios.get(`/current-weather-data?cities=${cities.join(',')}`)
