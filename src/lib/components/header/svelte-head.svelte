@@ -7,5 +7,5 @@
 <svelte:head>
 	<title>{city}</title>
 	<meta name={metaName} content={metaContent} />
-	<link rel="icon" href="/src/lib/images/freyr-icon.svg" type="image/x-icon">
+	<link rel="icon" href="/static/freyr-icon.svg" type="image/x-icon">
 </svelte:head>
