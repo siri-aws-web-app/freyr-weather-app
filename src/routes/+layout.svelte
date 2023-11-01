@@ -6,10 +6,30 @@
 	import { IconChevronDown } from '@tabler/icons-svelte';
 	import CitiesDropdownMenu from '$lib/components/appbar/dropdown-menu.svelte';
 
-	export let show:boolean = false;
-	function handleDropDownMenu() {
+	let show:boolean = false;
+	let enableMouseEnter:boolean = true;
+
+	function toggleDropDownMenu() {
 		show = !show
+		if (show) {
+			enableMouseEnter = false;
+			setTimeout(() => {
+				enableMouseEnter = true;
+			}, 1000);
+		} else {
+			enableMouseEnter = true;
+		}
 	}
+	
+	function handleMouseEnter() {
+		if (enableMouseEnter) {
+		show = true;
+		}
+  	}
+
+	function handleMouseLeave() {
+    	show = false;
+  	}
 </script>
 
 <!-- App Shell -->
@@ -31,7 +51,7 @@
 								</div>
 							</button>
 						</form>
-						<form on:mouseenter={handleDropDownMenu} on:mouseleave={handleDropDownMenu}>
+						<form on:mouseenter={handleMouseEnter} on:mouseleave={handleMouseLeave}>
 							<button class="btn p-0">
 								<div class="logo-item variant-soft hover:brightness-150 w-48">
 								<span>Cities</span>
@@ -39,7 +59,9 @@
 								</div>
 							</button>
 							{#if show}
-								<CitiesDropdownMenu />	
+								<div on:click={toggleDropDownMenu} on:keydown={toggleDropDownMenu} role="button" tabindex="0">
+									<CitiesDropdownMenu />
+								</div>
 							{/if}
 						</form>
 						<form action="/about">
