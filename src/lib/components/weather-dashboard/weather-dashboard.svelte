@@ -44,33 +44,39 @@
         </div>
 
 
-        <div class="grid grid-rows-[4rem_1fr_1fr] col-span-1 gap-3 mt-6">
+        <div class="grid grid-rows-[4rem_1fr] col-span-1 gap-3 my-6">
             <!-- Forecast section -->
             <div class="prose prose-xl prose-invert p-0">
                 <h3 class="text-center text">
                     The <SpanGradient text="Air Quality" />
                 </h3>
             </div>
-            <div class="card">
+            <div class="card variant-filled py-20">
                 
             </div>
         </div>
 
-        <div class="grid grid-rows-[4rem_1fr_1fr] col-span-3 gap-3 mt-6">
+        <div class="grid grid-rows-[4rem_1fr] col-span-3 gap-3 my-6">
             <!-- Forecast section -->
             <div class="prose prose-xl prose-invert p-0">
                 <h3 class="text-center text">
                     Places To <SpanGradient text="Visit" />
                 </h3>
             </div>
+            <div class="card variant-filled py-20">
+                
+            </div>
         </div>
 
-        <div class="grid grid-rows-[4rem_1fr_1fr] col-span-1 gap-3 mt-6">
+        <div class="grid grid-rows-[4rem_1fr] col-span-1 gap-3 my-6">
             <!-- Forecast section -->
             <div class="prose prose-xl prose-invert p-0">
                 <h3 class="text-center text">
                     Current <SpanGradient text="Wind" />
                 </h3>
+            </div>
+            <div class="card variant-filled py-20">
+                
             </div>
         </div>
     </div>
