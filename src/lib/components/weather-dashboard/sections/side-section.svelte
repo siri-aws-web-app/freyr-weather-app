@@ -1,6 +1,6 @@
 <script>
 
-	import SpanGradient from "../typography/span-gradient.svelte";
+	import SpanGradient from "../../typography/span-gradient.svelte";
 
 </script>
 

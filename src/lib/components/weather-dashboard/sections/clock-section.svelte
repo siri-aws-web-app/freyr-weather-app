@@ -1,5 +1,5 @@
 <script>
-	import { onDestroy, onMount } from "svelte";
+	import { onMount } from "svelte";
 
     let CurrentTime = new Date();
     $: time = CurrentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });

@@ -2,10 +2,14 @@
 	import SvelteHead from '$lib/components/header/svelte-head.svelte';
 	import SpanGradient from '$lib/components/typography/span-gradient.svelte';
 	import { fade } from 'svelte/transition';
-    import KaBanner from '$lib/images/banners/ka-b.png';
-    import ForecastSection from './forecast-section.svelte';
-	import ClockSection from './clock-section.svelte';
-	import SideSection from './side-section.svelte';
+    import KaBanner from '$lib/images/banners/ka-cover.png';
+    import ForecastSection from './sections/forecast-section.svelte';
+	import ClockSection from './sections/clock-section.svelte';
+	import SideSection from './sections/side-section.svelte';
+	import SnapshotsSection from './sections/snapshots-section.svelte';
+
+    export let city: string;
+    export let cityDescription: string;
 </script>
 
 <SvelteHead city="About" metaName="about" metaContent="About this app" />
@@ -13,10 +17,10 @@
 <!-- Page Heading -->
 <article class="prose prose-xl prose-invert mx-auto my-8" in:fade={{ duration:400 }}>
 	<h1 class="text-center text mb-0">
-		<SpanGradient text="KARLSRUHE" />
+		<SpanGradient text="{city}" />
 	</h1>
     <h2 class="text-center mt-1">
-        THE FAN-CITY
+        {cityDescription}
     </h2>
 </article>
 
@@ -49,7 +53,7 @@
             <!-- Forecast section -->
             <div class="prose prose-xl prose-invert p-0">
                 <h3 class="text-center text">
-                    The <SpanGradient text="Air Quality" />
+                    AIR <SpanGradient text="QUALITY" />
                 </h3>
             </div>
             <div class="card variant-surface-filled py-5">
@@ -61,19 +65,11 @@
             <!-- Forecast section -->
             <div class="prose prose-xl prose-invert p-0">
                 <h3 class="text-center text">
-                    Places To <SpanGradient text="Visit" />
+                    CITY IN <SpanGradient text="SNAPSHOTS" />
                 </h3>
             </div>
             <div>
-                <div class="card variant-surface-filled py-5">
-                    <SideSection />
-                </div>
-                <div class="card variant-surface-filled py-5">
-                    <SideSection />
-                </div>
-                <div class="card variant-surface-filled py-5">
-                    <SideSection />
-                </div>
+                <SnapshotsSection />
             </div>
         </div>
 
@@ -81,7 +77,7 @@
             <!-- Forecast section -->
             <div class="prose prose-xl prose-invert p-0">
                 <h3 class="text-center text">
-                    Current <SpanGradient text="Wind" />
+                    CURRENT <SpanGradient text="WIND" />
                 </h3>
             </div>
             <div class="card variant-surface-filled py-5">
