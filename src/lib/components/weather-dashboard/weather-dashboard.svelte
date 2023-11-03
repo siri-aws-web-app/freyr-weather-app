@@ -5,6 +5,7 @@
     import KaBanner from '$lib/images/banners/ka-b.png';
     import ForecastSection from './forecast-section.svelte';
 	import ClockSection from './clock-section.svelte';
+	import SideSection from './side-section.svelte';
 </script>
 
 <SvelteHead city="About" metaName="about" metaContent="About this app" />
@@ -14,14 +15,14 @@
 	<h1 class="text-center text mb-0">
 		<SpanGradient text="KARLSRUHE" />
 	</h1>
-    <h2 class="text-center mt-0">
+    <h2 class="text-center mt-1">
         THE FAN-CITY
     </h2>
 </article>
 
 <section class="w-4/5 mx-auto" in:fade={{ duration:400 }}>
 
-    <div class="grid grid-cols-5 gap-4 container h-full mx-auto justify-center items-center">
+    <div class="grid grid-cols-5 gap-4 container h-full mx-auto">
         <div class="col-span-5 relative mb-24">
             <div class="drop-shadow-xl relative">
                 <img class="h-auto rounded-[2rem] brightness-100" src="{KaBanner}" alt="{"Karlsruhe"}">
@@ -44,15 +45,15 @@
         </div>
 
 
-        <div class="grid grid-rows-[4rem_1fr] col-span-1 gap-3 my-6">
+        <div class="grid grid-rows-[4rem_1fr] col-span-1 gap-3 my-6 items-start">
             <!-- Forecast section -->
             <div class="prose prose-xl prose-invert p-0">
                 <h3 class="text-center text">
                     The <SpanGradient text="Air Quality" />
                 </h3>
             </div>
-            <div class="card variant-filled py-20">
-                
+            <div class="card variant-surface-filled py-5">
+                <SideSection />
             </div>
         </div>
 
@@ -63,20 +64,28 @@
                     Places To <SpanGradient text="Visit" />
                 </h3>
             </div>
-            <div class="card variant-filled py-20">
-                
+            <div>
+                <div class="card variant-surface-filled py-5">
+                    <SideSection />
+                </div>
+                <div class="card variant-surface-filled py-5">
+                    <SideSection />
+                </div>
+                <div class="card variant-surface-filled py-5">
+                    <SideSection />
+                </div>
             </div>
         </div>
 
-        <div class="grid grid-rows-[4rem_1fr] col-span-1 gap-3 my-6">
+        <div class="grid grid-rows-[4rem_1fr] col-span-1 gap-3 my-6 items-start">
             <!-- Forecast section -->
             <div class="prose prose-xl prose-invert p-0">
                 <h3 class="text-center text">
                     Current <SpanGradient text="Wind" />
                 </h3>
             </div>
-            <div class="card variant-filled py-20">
-                
+            <div class="card variant-surface-filled py-5">
+                <SideSection />
             </div>
         </div>
     </div>
