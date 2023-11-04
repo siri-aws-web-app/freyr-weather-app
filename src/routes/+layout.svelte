@@ -74,7 +74,7 @@
 					</div>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
-				<a href="https://github.com/orgs/siri-aws-web-app/repositories" target="_blank">
+				<a href="https://github.com/siri-aws-web-app" target="_blank">
 						<img class="w-10" src="{GithubLogo}" alt="github-logo">
 				</a>
 			</svelte:fragment>
