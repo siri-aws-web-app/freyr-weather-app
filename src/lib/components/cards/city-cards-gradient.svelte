@@ -4,7 +4,7 @@
 </script>
 
 {#await image}
-<div class="placeholder-circle w-16"></div>
+    <div class="placeholder-circle w-16"></div>
     {:then image}
         <a href="/cities/{city.toLowerCase()}">
             <button class="block card card-hover hover:brightness-125 bg-black bg-gradient-to-br variant-gradient-warning-error" >

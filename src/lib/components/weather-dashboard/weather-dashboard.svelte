@@ -39,9 +39,6 @@
         parseCurrentWeatherData(fullWeatherData);
         parseAirQualityData(fullWeatherData);
         parseWindData(fullWeatherData);
-
-        console.log(airQuality);
-        console.log(wind);
     }
 
     onMount(() => {
