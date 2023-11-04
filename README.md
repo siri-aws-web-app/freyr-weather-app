@@ -12,4 +12,4 @@ The Freyr Weather App was written in about 5-7 days. It is not responisve as it 
 
 **Live App:** [siri-freyr.xyz](https://siri-freyr.xyz/)
 
-Unfortunately, there is no implemention for a "www." domain as I did not set it up. Again, due to lack of time I skipped this part, but hey, at least i did the https and SSL connection right?
+Unfortunately, there is no implemention for a "www" domain as I did not set it up. Again, due to lack of time I skipped that part, but hey, at least i did the https and SSL connection right?
