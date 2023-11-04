@@ -2,6 +2,8 @@
     export let city: string;
     export let metaName: string;
     export let metaContent: string;
+	
+    window.scrollTo(50, 0);
 </script>
 
 <svelte:head>
