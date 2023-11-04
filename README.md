@@ -10,6 +10,6 @@ The Freyr Weather App was written in about 5-7 days. It is not responisve as it 
 - **Skeleton UI**: Provides a smooth UI library that is completely configurable with Tailwind.
 - **Automated Deployment**: Release-based deployment workflows that cater to different environments based on the release tag suffix (`-dev`, `-stag`, or no suffix for production).
 
-**Live App:** [https://siri-freyr.xyz/](https://siri-freyr.xyz/)
+**Live App:** [siri-freyr.xyz](https://siri-freyr.xyz/)
 
 Unfortunately, there is no implemention for a www. domain as I did not set it up. Again, due to lack of time it was just not feasible, but hey, at least i did the https and SSL connection right?
