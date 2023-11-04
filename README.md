@@ -1,38 +1,11 @@
-# create-svelte
+# Freyr Weather App
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+The Freyr Weather App was written in about 5-7 days. It is not responisve as it wasnt really the focus of my project (Terraform and AWS was), But I hope it did the job to show that I'm not too shabby with the frontend.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+- **Svelte and SvelteKit**: Utilizing the latest technologies for a seamless, reactive user experience. I'm a trendy boy.
+- **TypeScript**: Ensuring type safety and scalable code management across the application.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development without leaving your HTML.
+- **Skeleton UI**: Provides a smooth UI library that is completely configurable with Tailwind.
+- **Automated Deployment**: Release-based deployment workflows that cater to different environments based on the release tag suffix (`-dev`, `-stag`, or no suffix for production).
