@@ -24,7 +24,6 @@ export async function callApiServiceAndParceValue(service: AvailableServices, ci
         }
         const rawDataValue = await rawData[cityLowercase][0].weather_data.Value;
         const parsedWeatherDataValue = JSON.parse(rawDataValue);
-        console.log(parsedWeatherDataValue);
         
         return parsedWeatherDataValue;
     } catch (error) {

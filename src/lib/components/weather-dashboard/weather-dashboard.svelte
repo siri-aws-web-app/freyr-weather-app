@@ -42,6 +42,7 @@
     }
 
     onMount(() => {
+        preloadBanner(cityBanner);
         loadWeatherData();
     });
 
@@ -115,6 +116,14 @@
         const date = new Date(dateStr);
         return date.toLocaleDateString('en-US', { weekday: 'long' });
     }
+
+    function preloadBanner(src: string) {
+        return new Promise((resolve) => {
+            let img = new Image()
+            img.onload = resolve
+            img.src = src
+        })
+    }
 </script>
 
 <SvelteHead city="About" metaName="about" metaContent="About this app" />
@@ -140,7 +149,7 @@
             <div class="grid grid-cols-7 gap-4 container h-full mx-auto">
                 <div class="col-span-7 relative mb-24">
                     <div class="drop-shadow-xl relative">
-                        <img class="h-auto rounded-[2rem] brightness-100" src="{cityBanner}" alt="{"Karlsruhe"}">
+                        <img class="h-auto rounded-[2rem] brightness-100" src="{cityBanner}" alt="{city}">
                     </div>
                     
                     <div class="absolute bottom-0 transform translate-y-1/2 flex justify-center w-full" in:fly={{ y:100, duration:1000 }}>
