@@ -19,6 +19,7 @@
     export let citySnapshots2: any;
 
     let loadingState = true;
+    let loadingImage = true;
 
     let fullForecastData: any;
     let parsedForecastData: Forecast[];
@@ -115,11 +116,15 @@
         const date = new Date(dateStr);
         return date.toLocaleDateString('en-US', { weekday: 'long' });
     }
+
+    function handleImageLoad() {
+        loadingImage = false;
+    }
 </script>
 
 <SvelteHead city="About" metaName="about" metaContent="About this app" />
 
-{#if loadingState}
+{#if loadingState && loadingImage}
     <div class="flex justify-center items-center h-screen">
         <ProgressRadial value={undefined} />    
     </div>
@@ -140,7 +145,7 @@
             <div class="grid grid-cols-7 gap-4 container h-full mx-auto">
                 <div class="col-span-7 relative mb-24">
                     <div class="drop-shadow-xl relative">
-                        <img class="h-auto rounded-[2rem] brightness-100" src="{cityBanner}" alt="{"Karlsruhe"}">
+                        <img class="h-auto rounded-[2rem] brightness-100" src="{cityBanner}" alt="{"Karlsruhe"}" on:load={handleImageLoad}>
                     </div>
                     
                     <div class="absolute bottom-0 transform translate-y-1/2 flex justify-center w-full" in:fly={{ y:100, duration:1000 }}>
