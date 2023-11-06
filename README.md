@@ -1,6 +1,6 @@
 # Freyr Weather App
 
-The Freyr Weather App was written in very short time span. It is not responisve as it wasnt really the focus of my project (Terraform and AWS was), But I hope it did the job to show that I'm not too shabby with the frontend.
+The Freyr Weather App was written in a very short time span. It is not responisve as it wasnt really the focus of my project (Terraform and AWS was), But I hope it did the job to show that I'm not too shabby with the frontend.
 
 ## Features
 
